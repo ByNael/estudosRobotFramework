@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240108 19:34:45.967" rpa="false" schemaversion="4">
+<suite id="s1" name="Modelo" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aula01\modelo.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o site do Robot" line="12">
+<kw name="Abrir Site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://robotframework.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 19:34:46.195" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
+<status status="PASS" starttime="20240108 19:34:46.195" endtime="20240108 19:34:51.794"/>
+</kw>
+<status status="PASS" starttime="20240108 19:34:46.195" endtime="20240108 19:34:51.794"/>
+</kw>
+<status status="PASS" starttime="20240108 19:34:46.194" endtime="20240108 19:34:51.805"/>
+</test>
+<status status="PASS" starttime="20240108 19:34:45.970" endtime="20240108 19:34:51.817"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Modelo">Modelo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
