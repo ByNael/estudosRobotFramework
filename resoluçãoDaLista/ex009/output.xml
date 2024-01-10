@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240109 12:41:13.830" rpa="false" schemaversion="4">
+<suite id="s1" name="Form" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\resoluçãoDaLista\form.robot">
+<test id="s1-t1" name="Cenário 1:" line="30">
+<kw name="abrir navegador e acessar o site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 12:41:14.059" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240109 12:41:14.058" endtime="20240109 12:41:19.988"/>
+</kw>
+<status status="PASS" starttime="20240109 12:41:14.058" endtime="20240109 12:41:19.988"/>
+</kw>
+<kw name="preencher campos">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${input_userName}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240109 12:41:19.997" endtime="20240109 12:41:20.455"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_userName}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 12:41:20.456" level="INFO">Typing text 'Admin' into text field 'username'.</msg>
+<status status="PASS" starttime="20240109 12:41:20.456" endtime="20240109 12:41:20.635"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 12:41:22.635" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240109 12:41:20.635" endtime="20240109 12:41:22.635"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240109 12:41:22.635" endtime="20240109 12:41:22.652"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 12:41:22.653" level="INFO">Typing text 'admin123' into text field 'password'.</msg>
+<status status="PASS" starttime="20240109 12:41:22.652" endtime="20240109 12:41:22.776"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 12:41:24.777" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240109 12:41:22.776" endtime="20240109 12:41:24.777"/>
+</kw>
+<status status="PASS" starttime="20240109 12:41:19.996" endtime="20240109 12:41:24.777"/>
+</kw>
+<kw name="clicar em login">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240109 12:41:24.781" endtime="20240109 12:41:24.798"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 12:41:24.799" level="INFO">Clicking element 'xpath://button[(text()=' Login ')]'.</msg>
+<status status="PASS" starttime="20240109 12:41:24.798" endtime="20240109 12:41:25.982"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 12:41:30.982" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240109 12:41:25.982" endtime="20240109 12:41:30.982"/>
+</kw>
+<status status="PASS" starttime="20240109 12:41:24.780" endtime="20240109 12:41:30.982"/>
+</kw>
+<kw name="fechar browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240109 12:41:30.982" endtime="20240109 12:41:33.829"/>
+</kw>
+<status status="PASS" starttime="20240109 12:41:30.982" endtime="20240109 12:41:33.829"/>
+</kw>
+<status status="PASS" starttime="20240109 12:41:14.057" endtime="20240109 12:41:33.883"/>
+</test>
+<status status="PASS" starttime="20240109 12:41:13.832" endtime="20240109 12:41:34.381"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

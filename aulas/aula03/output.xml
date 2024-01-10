@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240109 11:03:48.824" rpa="false" schemaversion="4">
+<suite id="s1" name="Form" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aula03\form.robot">
+<test id="s1-t1" name="Cenário 1: preencher formulario" line="45">
+<kw name="abrir navegador e acessar o site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 11:03:49.030" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20240109 11:03:49.030" endtime="20240109 11:04:02.657"/>
+</kw>
+<status status="PASS" starttime="20240109 11:03:49.030" endtime="20240109 11:04:02.657"/>
+</kw>
+<kw name="preencher campos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_firstName}</arg>
+<arg>Natanael</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 11:04:02.659" level="INFO">Typing text 'Natanael' into text field 'id:firstName'.</msg>
+<status status="PASS" starttime="20240109 11:04:02.658" endtime="20240109 11:04:02.783"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:04:03.786" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240109 11:04:02.784" endtime="20240109 11:04:03.786"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_lastName}</arg>
+<arg>Lino</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 11:04:03.786" level="INFO">Typing text 'Lino' into text field 'id:lastName'.</msg>
+<status status="PASS" starttime="20240109 11:04:03.786" endtime="20240109 11:04:03.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:04:04.887" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240109 11:04:03.887" endtime="20240109 11:04:04.887"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_userEmail}</arg>
+<arg>santoslino.natanael@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 11:04:04.887" level="INFO">Typing text 'santoslino.natanael@gmail.com' into text field 'id:userEmail'.</msg>
+<status status="PASS" starttime="20240109 11:04:04.887" endtime="20240109 11:04:05.028"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:04:06.028" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240109 11:04:05.028" endtime="20240109 11:04:06.028"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_radioGender}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 11:04:06.028" level="INFO">Clicking element 'id:gender-radio-1'.</msg>
+<msg timestamp="20240109 11:04:07.314" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240109 11:04:07.314" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input name="gender" required="" type="radio" id="gender-radio-1" class="custom-control-input" value="Male"&gt; is not clickable at point (407, 160). Other element would receive the click: &lt;label title="" for="gender-radio-1" class="custom-control-label"&gt;...&lt;/label&gt;
+  (Session info: chrome=120.0.6099.200)
+Stacktrace:
+	GetHandleVerifier [0x00007FF648E52142+3514994]
+	(No symbol) [0x00007FF648A70CE2]
+	(No symbol) [0x00007FF6489176AA]
+	(No symbol) [0x00007FF6489688F3]
+	(No symbol) [0x00007FF6489668ED]
+	(No symbol) [0x00007FF6489640EC]
+	(No symbol) [0x00007FF648962EA5]
+	(No symbol) [0x00007FF648956A0F]
+	(No symbol) [0x00007FF648985FEA]
+	(No symbol) [0x00007FF6489563B6]
+	(No symbol) [0x00007FF648986490]
+	(No symbol) [0x00007FF6489A28F6]
+	(No symbol) [0x00007FF648985D93]
+	(No symbol) [0x00007FF648954BDC]
+	(No symbol) [0x00007FF648955C64]
+	GetHandleVerifier [0x00007FF648E7E16B+3695259]
+	GetHandleVerifier [0x00007FF648ED6737+4057191]
+	GetHandleVerifier [0x00007FF648ECE4E3+4023827]
+	GetHandleVerifier [0x00007FF648BA04F9+689705]
+	(No symbol) [0x00007FF648A7C048]
+	(No symbol) [0x00007FF648A78044]
+	(No symbol) [0x00007FF648A781C9]
+	(No symbol) [0x00007FF648A688C4]
+	BaseThreadInitThunk [0x00007FFD07AF257D+29]
+	RtlUserThreadStart [0x00007FFD083AAA58+40]
+</msg>
+<status status="FAIL" starttime="20240109 11:04:06.028" endtime="20240109 11:04:07.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 11:04:07.320" endtime="20240109 11:04:07.320"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_userNumber}</arg>
+<arg>85982118611</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 11:04:07.320" endtime="20240109 11:04:07.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 11:04:07.320" endtime="20240109 11:04:07.320"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textarea_currentAddress}</arg>
+<arg>62089634906209835</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 11:04:07.320" endtime="20240109 11:04:07.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 11:04:07.320" endtime="20240109 11:04:07.322"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:04:02.658" endtime="20240109 11:04:07.322"/>
+</kw>
+<kw name="clicar em submit">
+<status status="NOT RUN" starttime="20240109 11:04:07.322" endtime="20240109 11:04:07.322"/>
+</kw>
+<kw name="fechar navegador">
+<status status="NOT RUN" starttime="20240109 11:04:07.322" endtime="20240109 11:04:07.322"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:03:49.029" endtime="20240109 11:04:07.322">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input name="gender" required="" type="radio" id="gender-radio-1" class="custom-control-input" value="Male"&gt; is not clickable at point (407, 160). Other element would receive the click: &lt;label title="" for="gender-radio-1" class="custom-control-label"&gt;...&lt;/label&gt;
+  (Session info: chrome=120.0.6099.200)
+Stacktrace:
+	GetHandleVerifier [0x00007FF648E52142+3514994]
+	(No symbol) [0x00007FF648A70CE2]
+	(No symbol) [0x00007FF6489176AA]
+	(No symbol) [0x00007FF6489688F3]
+	(No symbol) [0x00007FF6489668ED]
+	(No symbol) [0x00007FF6489640EC]
+	(No symbol) [0x00007FF648962EA5]
+	(No symbol) [0x00007FF648956A0F]
+	(No symbol) [0x00007FF648985FEA]
+	(No symbol) [0x00007FF6489563B6]
+	(No symbol) [0x00007FF648986490]
+	(No symbol) [0x00007FF6489A28F6]
+	(No symbol) [0x00007FF648985D93]
+	(No symbol) [0x00007FF648954BDC]
+	(No symbol) [0x00007FF648955C64]
+	GetHandleVerifier [0x00007FF648E7E16B+3695259]
+	GetHandleVerifier [0x00007FF648ED6737+4057191]
+	GetHandleVerifier [0x00007FF648ECE4E3+4023827]
+	GetHandleVerifier [0x00007FF648BA04F9+689705]
+	(No symbol) [0x00007FF648A7C048]
+	(No symbol) [0x00007FF648A78044]
+	(No symbol) [0x00007FF648A781C9]
+	(No symbol) [0x00007FF648A688C4]
+	BaseThreadInitThunk [0x00007FFD07AF257D+29]
+	RtlUserThreadStart [0x00007FFD083AAA58+40]
+</status>
+</test>
+<status status="FAIL" starttime="20240109 11:03:48.826" endtime="20240109 11:04:07.325"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
