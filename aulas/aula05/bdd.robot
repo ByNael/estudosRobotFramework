@@ -21,6 +21,7 @@ ${prova}                (//span[text()='Compartilhar'])[1]
 ***Keywords***
 Dado que eu acesso o site do youtube
     Open Browser    ${URL}      ${Browser}
+    Maximize Browser Window
 
 Quando digito o nome da musica
     Wait Until Element Is Visible       ${input_pesquisa}
@@ -36,9 +37,9 @@ E clico na primeira opção da lista
 Então o vídeo é executado
     Wait Until Element Is Visible       ${button_anuncio}       10
     Click Element       ${button_anuncio}
-#Wait Until Element Is Visible       ${prova}        10
-#Element Should Be Visible       ${prova}        #keyword que vai analisar se o elemento esta visivel e tudo no teste correu bem
-    Sleep       198s       
+    Wait Until Element Is Visible       ${prova}        10
+    Element Should Be Visible       ${prova}        #keyword que vai analisar se o elemento esta visivel e tudo no teste correu bem
+    Sleep       5s       
     Close Browser
 
 ***Test Cases***

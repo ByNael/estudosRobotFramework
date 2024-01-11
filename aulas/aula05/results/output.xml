@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240111 14:38:27.264" rpa="false" schemaversion="4">
+<suite id="s1" name="Bdd" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aulas\aula05\bdd.robot">
+<test id="s1-t1" name="Cenário 1: Executar video no site do youtube" line="46">
+<kw name="Dado que eu acesso o site do youtube">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 14:38:27.489" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20240111 14:38:27.488" endtime="20240111 14:38:37.607"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 14:38:37.607" endtime="20240111 14:38:38.132"/>
+</kw>
+<status status="PASS" starttime="20240111 14:38:27.488" endtime="20240111 14:38:38.133"/>
+</kw>
+<kw name="Quando digito o nome da musica">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${input_pesquisa}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240111 14:38:38.136" endtime="20240111 14:38:38.496"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_pesquisa}</arg>
+<arg>${nomeDaMusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 14:38:38.497" level="INFO">Typing text 'Wiu Não me liga 00:00' into text field '//input[@id='search']'.</msg>
+<status status="PASS" starttime="20240111 14:38:38.496" endtime="20240111 14:38:38.793"/>
+</kw>
+<status status="PASS" starttime="20240111 14:38:38.134" endtime="20240111 14:38:38.793"/>
+</kw>
+<kw name="E clico no botão buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240111 14:38:38.794" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20240111 14:38:38.793" endtime="20240111 14:38:38.931"/>
+</kw>
+<status status="PASS" starttime="20240111 14:38:38.793" endtime="20240111 14:38:38.931"/>
+</kw>
+<kw name="E clico na primeira opção da lista">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${primeiro_elemento}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240111 14:38:38.950" endtime="20240111 14:38:40.217"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${primeiro_elemento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240111 14:38:40.217" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<status status="PASS" starttime="20240111 14:38:40.217" endtime="20240111 14:38:40.518"/>
+</kw>
+<status status="PASS" starttime="20240111 14:38:38.950" endtime="20240111 14:38:40.518"/>
+</kw>
+<kw name="Então o vídeo é executado">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_anuncio}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240111 14:38:40.536" endtime="20240111 14:38:46.920"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_anuncio}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240111 14:38:46.920" level="INFO">Clicking element '//button[@class="ytp-ad-skip-button-modern ytp-button"]'.</msg>
+<status status="PASS" starttime="20240111 14:38:46.920" endtime="20240111 14:38:47.066"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${prova}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240111 14:38:47.067" endtime="20240111 14:38:47.229"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240111 14:38:47.275" level="INFO">Element '(//span[text()='Compartilhar'])[1]' is displayed.</msg>
+<status status="PASS" starttime="20240111 14:38:47.229" endtime="20240111 14:38:47.275"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 14:38:52.277" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240111 14:38:47.276" endtime="20240111 14:38:52.277"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240111 14:38:52.277" endtime="20240111 14:38:54.659"/>
+</kw>
+<status status="PASS" starttime="20240111 14:38:40.536" endtime="20240111 14:38:54.659"/>
+</kw>
+<status status="PASS" starttime="20240111 14:38:27.488" endtime="20240111 14:38:54.660"/>
+</test>
+<status status="PASS" starttime="20240111 14:38:27.266" endtime="20240111 14:38:54.661"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bdd">Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
