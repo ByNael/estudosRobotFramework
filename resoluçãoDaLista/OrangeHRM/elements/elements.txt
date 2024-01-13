@@ -1,0 +1,3 @@
+Aqui são armazenados xpaths e outros locators 
+ex: id, css selector
+resumidamente tudo que for de localizar elementos fica aqui

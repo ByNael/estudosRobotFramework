@@ -1,0 +1,2 @@
+aqui fica realmente a codificação do teste 
+importando tanto elements quanto resource
