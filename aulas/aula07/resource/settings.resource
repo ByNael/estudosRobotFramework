@@ -8,5 +8,8 @@ ${URL}  https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 ${Browser}  chrome
 
 #Dados do teste
-${Username}     Admin
-${Password}     admin123
+${Username}                     Admin
+${Password}                     admin123
+${firstNameEmployee}            Severino
+${middleNameEmployee}           Severo
+${lastNameEmployee}             De Severina Pereira Silva

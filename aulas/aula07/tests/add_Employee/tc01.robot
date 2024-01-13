@@ -7,6 +7,6 @@ TC01 - Criando um novo funcionario
     E faça o Login
     E clique em PIM
     E clique em Add Employee 
-    #E preenche os dados de cadastro
-    #E clique em save
+    E preenche os dados de cadastro
+    E clique em save
     E feche o navegador
