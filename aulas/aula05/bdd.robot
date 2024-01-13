@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 ***Variables***
 #Dados do meu teste
-${nomeDaMusica}     Wiu Não me liga 00:00
+${nomeDaMusica}     coração de gelo
 
 #variávei de configuração
 ${URL}      https://www.youtube.com/
@@ -39,7 +39,7 @@ Então o vídeo é executado
     Click Element       ${button_anuncio}
     Wait Until Element Is Visible       ${prova}        10
     Element Should Be Visible       ${prova}        #keyword que vai analisar se o elemento esta visivel e tudo no teste correu bem
-    Sleep       5s       
+    Sleep       180s       
     Close Browser
 
 ***Test Cases***

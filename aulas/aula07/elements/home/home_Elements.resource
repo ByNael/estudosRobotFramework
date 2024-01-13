@@ -1,5 +1,3 @@
 ***Variables***
 &{home}
-...     A_Signup=//a[@href="https://www.phptravels.net/signup"]
-...     a_voos=//a[contains(text(),"flights")]
-...     A_Visto=//a[@href="https://www.phptravels.net/visa"]
+...     A_PIM=//a[@href="/web/index.php/pim/viewPimModule"]
