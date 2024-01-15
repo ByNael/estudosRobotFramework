@@ -1,8 +1,15 @@
 ***Variables***
 &{PIM}
-...     A_addEmployee=//a[text()='Add Employee']
+...     A_AddEmployee=//a[text()='Add Employee']
+...     A_EmployeeList=//a[text()='Employee List']
+...     Input_EmployeeName=(//input[@placeholder="Type for hints..."])[1]
 ...     Input_FirstName=//input[@name="firstName"]
 ...     Input_MiddleName=//input[@name="middleName"]        
 ...     Input_LastName=//input[@name="lastName"]    
 ...     Input_EmployeeImage_File=//input[@class="oxd-file-input"]
+...     Input_EmployeeId=(//input[@class="oxd-input oxd-input--active"])[2]
 ...     Button_Save=//button[text()=' Save ']                   
+...     Button_Search=//button[text()=' Search ']
+...     Button_RemoveEmployee=(//button[@class='oxd-icon-button oxd-table-cell-action-space'])[1]
+...     Button_Delete=//button[@class="oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin"]
+...     Div_Prova=//div[text()='Severino Severo']
