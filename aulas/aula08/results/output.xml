@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240116 14:38:45.217" rpa="false" schemaversion="4">
+<suite id="s1" name="Employee" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aulas\aula08\suites\Employee">
+<suite id="s1-s1" name="Employee" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aulas\aula08\suites\Employee\employee.robot">
+<test id="s1-s1-t1" name="TC01 - Criando um novo funcionario" line="7">
+<kw name="Acessar o site logar e acessar o pim" library="setup_teardown" type="SETUP">
+<kw name="Dado que eu acesse o orangeHRM" library="login_page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 14:38:45.470" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240116 14:38:45.469" endtime="20240116 14:38:48.759"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 14:38:48.760" endtime="20240116 14:38:52.430"/>
+</kw>
+<status status="PASS" starttime="20240116 14:38:45.469" endtime="20240116 14:38:52.430"/>
+</kw>
+<kw name="E faça o Login" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login.Input_Username}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:38:52.430" endtime="20240116 14:38:53.092"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login.Input_Username}</arg>
+<arg>${dados_Registro.Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:38:53.093" level="INFO">Typing text 'Admin' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20240116 14:38:53.092" endtime="20240116 14:38:53.196"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login.Input_Password}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:38:53.196" endtime="20240116 14:38:53.226"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login.Input_Password}</arg>
+<arg>${dados_Registro.Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:38:53.227" level="INFO">Typing text 'admin123' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240116 14:38:53.227" endtime="20240116 14:38:53.329"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login.Button_Login}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:38:53.329" endtime="20240116 14:38:53.346"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login.Button_Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:38:53.346" level="INFO">Clicking element '//button[text()=' Login ']'.</msg>
+<status status="PASS" starttime="20240116 14:38:53.346" endtime="20240116 14:38:53.380"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 14:38:58.380" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 14:38:53.380" endtime="20240116 14:38:58.380"/>
+</kw>
+<status status="PASS" starttime="20240116 14:38:52.430" endtime="20240116 14:38:58.380"/>
+</kw>
+<kw name="E clique em PIM" library="home_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.A_PIM}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:38:58.380" endtime="20240116 14:38:58.402"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.A_PIM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:38:58.404" level="INFO">Clicking element '//a[@href="/web/index.php/pim/viewPimModule"]'.</msg>
+<status status="PASS" starttime="20240116 14:38:58.402" endtime="20240116 14:38:59.254"/>
+</kw>
+<status status="PASS" starttime="20240116 14:38:58.380" endtime="20240116 14:38:59.255"/>
+</kw>
+<status status="PASS" starttime="20240116 14:38:45.469" endtime="20240116 14:38:59.255"/>
+</kw>
+<kw name="Dado que clique em Add Employee" library="pim_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PIM.A_AddEmployee}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:38:59.255" endtime="20240116 14:38:59.693"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PIM.A_AddEmployee}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:38:59.694" level="INFO">Clicking element '//a[text()='Add Employee']'.</msg>
+<status status="PASS" starttime="20240116 14:38:59.693" endtime="20240116 14:39:00.453"/>
+</kw>
+<status status="PASS" starttime="20240116 14:38:59.255" endtime="20240116 14:39:00.453"/>
+</kw>
+<kw name="E preenche os dados de cadastro" library="add_Employee_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addEmployee.Input_FirstName}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:00.454" endtime="20240116 14:39:00.899"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addEmployee.Input_FirstName}</arg>
+<arg>${dados_Registro.firstNameEmployee}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:00.900" level="INFO">Typing text 'Severino' into text field '//input[@name="firstName"]'.</msg>
+<status status="PASS" starttime="20240116 14:39:00.899" endtime="20240116 14:39:00.997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addEmployee.Input_MiddleName}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:00.997" endtime="20240116 14:39:01.020"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addEmployee.Input_MiddleName}</arg>
+<arg>${dados_Registro.middleNameEmployee}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:01.021" level="INFO">Typing text 'Severo' into text field '//input[@name="middleName"]'.</msg>
+<status status="PASS" starttime="20240116 14:39:01.020" endtime="20240116 14:39:01.121"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addEmployee.Input_LastName}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:01.121" endtime="20240116 14:39:01.139"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addEmployee.Input_LastName}</arg>
+<arg>${dados_Registro.lastNameEmployee}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:01.140" level="INFO">Typing text 'De Severina Pereira Silva' into text field '//input[@name="lastName"]'.</msg>
+<status status="PASS" starttime="20240116 14:39:01.139" endtime="20240116 14:39:01.253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addEmployee.Input_EmployeeId}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:01.254" endtime="20240116 14:39:01.272"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addEmployee.Input_EmployeeId}</arg>
+<arg>${dados_Registro.EmployeeId}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:01.273" level="INFO">Typing text '123' into text field '(//input[@class="oxd-input oxd-input--active"])[2]'.</msg>
+<status status="PASS" starttime="20240116 14:39:01.272" endtime="20240116 14:39:01.347"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:00.454" endtime="20240116 14:39:01.347"/>
+</kw>
+<kw name="E adicione foto do funcionario" library="add_Employee_page">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('.oxd-file-input').style.display = 'block';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 14:39:01.349" level="INFO">Executing JavaScript:
+document.querySelector('.oxd-file-input').style.display = 'block';
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 14:39:01.348" endtime="20240116 14:39:01.352"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${addEmployee.Input_EmployeeImage_File}</arg>
+<arg>C:\\Users\\natan\\OneDrive\\Imagens\\Documentos\\cursoRobotYt\\aulas\\aula08\\resources\\pages${/}${dados_Registro.EmployeeImage}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20240116 14:39:01.353" level="INFO">Sending C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aulas\aula08\resources\pages\severino.jpg to browser.</msg>
+<status status="PASS" starttime="20240116 14:39:01.352" endtime="20240116 14:39:01.378"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:01.348" endtime="20240116 14:39:01.378"/>
+</kw>
+<kw name="E clique em save" library="add_Employee_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addEmployee.Button_Save}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:01.380" endtime="20240116 14:39:01.407"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addEmployee.Button_Save}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:01.409" level="INFO">Clicking element '//button[text()=' Save ']'.</msg>
+<status status="PASS" starttime="20240116 14:39:01.407" endtime="20240116 14:39:01.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 14:39:11.977" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240116 14:39:01.976" endtime="20240116 14:39:11.977"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:01.380" endtime="20240116 14:39:11.977"/>
+</kw>
+<kw name="Então o empregado é adicionado" library="employee_List_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PIM.A_AddEmployee}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:11.977" endtime="20240116 14:39:11.994"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PIM.A_AddEmployee}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:11.995" level="INFO">Clicking element '//a[text()='Add Employee']'.</msg>
+<status status="PASS" starttime="20240116 14:39:11.994" endtime="20240116 14:39:12.523"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PIM.A_EmployeeList}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:12.523" endtime="20240116 14:39:13.013"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PIM.A_EmployeeList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:13.014" level="INFO">Clicking element '//a[text()='Employee List']'.</msg>
+<status status="PASS" starttime="20240116 14:39:13.013" endtime="20240116 14:39:13.656"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${employeeList.Div_Prova}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:13.656" endtime="20240116 14:39:15.155"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${employeeList.Div_Prova}</arg>
+<arg>10</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240116 14:39:15.170" level="INFO">Element '//div[text()='Severino Severo']' is displayed.</msg>
+<status status="PASS" starttime="20240116 14:39:15.155" endtime="20240116 14:39:15.170"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:11.977" endtime="20240116 14:39:15.170"/>
+</kw>
+<kw name="Fechar navegador" library="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240116 14:39:15.171" endtime="20240116 14:39:17.453"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:15.170" endtime="20240116 14:39:17.453"/>
+</kw>
+<status status="PASS" starttime="20240116 14:38:45.468" endtime="20240116 14:39:17.454"/>
+</test>
+<test id="s1-s1-t2" name="TC02 - Excluindo este funcionario" line="14">
+<kw name="Acessar o site logar e acessar o pim" library="setup_teardown" type="SETUP">
+<kw name="Dado que eu acesse o orangeHRM" library="login_page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 14:39:17.457" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240116 14:39:17.456" endtime="20240116 14:39:24.166"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 14:39:24.167" endtime="20240116 14:39:24.294"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:17.456" endtime="20240116 14:39:24.294"/>
+</kw>
+<kw name="E faça o Login" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login.Input_Username}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:24.294" endtime="20240116 14:39:24.824"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login.Input_Username}</arg>
+<arg>${dados_Registro.Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:24.825" level="INFO">Typing text 'Admin' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20240116 14:39:24.824" endtime="20240116 14:39:24.918"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login.Input_Password}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:24.918" endtime="20240116 14:39:24.943"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login.Input_Password}</arg>
+<arg>${dados_Registro.Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:24.944" level="INFO">Typing text 'admin123' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240116 14:39:24.943" endtime="20240116 14:39:25.059"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login.Button_Login}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:25.060" endtime="20240116 14:39:25.076"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login.Button_Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:25.077" level="INFO">Clicking element '//button[text()=' Login ']'.</msg>
+<status status="PASS" starttime="20240116 14:39:25.076" endtime="20240116 14:39:26.557"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 14:39:31.557" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 14:39:26.557" endtime="20240116 14:39:31.557"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:24.294" endtime="20240116 14:39:31.557"/>
+</kw>
+<kw name="E clique em PIM" library="home_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.A_PIM}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:31.557" endtime="20240116 14:39:31.576"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.A_PIM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:31.578" level="INFO">Clicking element '//a[@href="/web/index.php/pim/viewPimModule"]'.</msg>
+<status status="PASS" starttime="20240116 14:39:31.576" endtime="20240116 14:39:32.436"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:31.557" endtime="20240116 14:39:32.436"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:17.455" endtime="20240116 14:39:32.436"/>
+</kw>
+<kw name="Dado que clique em Employee List" library="pim_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PIM.A_EmployeeList}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:32.438" endtime="20240116 14:39:32.883"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PIM.A_EmployeeList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:32.884" level="INFO">Clicking element '//a[text()='Employee List']'.</msg>
+<status status="PASS" starttime="20240116 14:39:32.883" endtime="20240116 14:39:33.398"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:32.437" endtime="20240116 14:39:33.399"/>
+</kw>
+<kw name="E preenche o primeiro nome do empregado" library="employee_List_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${employeeList.Input_EmployeeName}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:33.399" endtime="20240116 14:39:33.835"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${employeeList.Input_EmployeeName}</arg>
+<arg>${dados_Registro.firstNameEmployee}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:33.836" level="INFO">Typing text 'Severino' into text field '(//input[@placeholder="Type for hints..."])[1]'.</msg>
+<status status="PASS" starttime="20240116 14:39:33.835" endtime="20240116 14:39:33.924"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:33.399" endtime="20240116 14:39:33.924"/>
+</kw>
+<kw name="E clique em search" library="employee_List_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${employeeList.Button_Search}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:33.925" endtime="20240116 14:39:33.945"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${employeeList.Button_Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:33.946" level="INFO">Clicking element '//button[text()=' Search ']'.</msg>
+<status status="PASS" starttime="20240116 14:39:33.946" endtime="20240116 14:39:33.992"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:33.925" endtime="20240116 14:39:33.992"/>
+</kw>
+<kw name="E clique em Remove Employee" library="employee_List_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${employeeList.Button_RemoveEmployee}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:33.992" endtime="20240116 14:39:34.427"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${employeeList.Button_RemoveEmployee}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:34.428" level="INFO">Clicking element '(//button[@class='oxd-icon-button oxd-table-cell-action-space'])[1]'.</msg>
+<status status="PASS" starttime="20240116 14:39:34.427" endtime="20240116 14:39:34.472"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:33.992" endtime="20240116 14:39:34.472"/>
+</kw>
+<kw name="E clique em Yes, Delete" library="employee_List_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${employeeList.Button_Delete}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:34.472" endtime="20240116 14:39:34.709"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${employeeList.Button_Delete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:34.710" level="INFO">Clicking element '//button[@class="oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin"]'.</msg>
+<status status="PASS" starttime="20240116 14:39:34.709" endtime="20240116 14:39:34.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 14:39:39.755" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 14:39:34.754" endtime="20240116 14:39:39.755"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:34.472" endtime="20240116 14:39:39.755"/>
+</kw>
+<kw name="Então o empregado é excluido" library="employee_List_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PIM.A_EmployeeList}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 14:39:39.756" endtime="20240116 14:39:39.773"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PIM.A_EmployeeList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 14:39:39.774" level="INFO">Clicking element '//a[text()='Employee List']'.</msg>
+<status status="PASS" starttime="20240116 14:39:39.773" endtime="20240116 14:39:40.255"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 14:39:45.256" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 14:39:40.255" endtime="20240116 14:39:45.256"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${employeeList.Div_Prova}</arg>
+<arg>10</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20240116 14:39:45.425" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 14:39:45.425" level="FAIL">10</msg>
+<status status="FAIL" starttime="20240116 14:39:45.256" endtime="20240116 14:39:45.427"/>
+</kw>
+<status status="FAIL" starttime="20240116 14:39:39.755" endtime="20240116 14:39:45.427"/>
+</kw>
+<kw name="Fechar navegador" library="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240116 14:39:45.428" endtime="20240116 14:39:47.694"/>
+</kw>
+<status status="PASS" starttime="20240116 14:39:45.427" endtime="20240116 14:39:47.694"/>
+</kw>
+<status status="FAIL" starttime="20240116 14:39:17.455" endtime="20240116 14:39:47.694">10</status>
+</test>
+<status status="FAIL" starttime="20240116 14:38:45.242" endtime="20240116 14:39:47.696"/>
+</suite>
+<status status="FAIL" starttime="20240116 14:38:45.219" endtime="20240116 14:39:47.698"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Employee">Employee</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="Employee">Employee.Employee</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

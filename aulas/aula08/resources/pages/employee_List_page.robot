@@ -32,3 +32,11 @@ Então o empregado é excluido
     Click Element                  ${PIM.A_EmployeeList}
     Sleep                          5s
     Element Should Not Be Visible  ${employeeList.Div_Prova}        10           #verifica se o empregrado foi excluido de fato
+
+Então o empregado é adicionado
+    Wait Until Element Is Visible  ${PIM.A_AddEmployee}         10
+    Click Element                  ${PIM.A_AddEmployee}
+    Wait Until Element Is Visible  ${PIM.A_EmployeeList}        10
+    Click Element                  ${PIM.A_EmployeeList}
+    Wait Until Element Is Visible  ${employeeList.Div_Prova}             10
+    Element Should Be Visible      ${employeeList.Div_Prova}        10           #verifica se o empregado foi adicionado de fato
