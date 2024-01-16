@@ -5,6 +5,7 @@ Test Teardown   Fechar navegador
 
 ***Test Cases***
 TC01 - Criando um novo funcionario
+    [Tags]  TC01  Employee
     Dado que clique em Add Employee 
     E preenche os dados de cadastro
     E adicione foto do funcionario
@@ -12,6 +13,7 @@ TC01 - Criando um novo funcionario
     Então o empregado é adicionado
 
 TC02 - Excluindo este funcionario
+    [Tags]  TC02  Employee
     Dado que clique em Employee List
     E preenche o primeiro nome do empregado
     E clique em search
