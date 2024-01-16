@@ -10,7 +10,7 @@ Resource        ../main.robot
 ...     Div_Prova=//div[text()='Severino Severo']
 
 ***Keywords***
-E preenche o primeiro nome do empregado
+Quando preenche o primeiro nome do empregado
     Wait Until Element Is Visible       ${employeeList.Input_EmployeeName}       10
     Input Text                          ${employeeList.Input_EmployeeName}       ${dados_Registro.firstNameEmployee}
 

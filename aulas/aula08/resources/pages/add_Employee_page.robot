@@ -11,7 +11,7 @@ Resource        ../main.robot
 ...     Button_Save=//button[text()=' Save ']   
 
 ***Keywords***
-E preenche os dados de cadastro
+Quando preenche os dados de cadastro
     Wait Until Element Is Visible  ${addEmployee.Input_FirstName}       10
     Input Text                     ${addEmployee.Input_FirstName}       ${dados_Registro.firstNameEmployee}
     Wait Until Element Is Visible  ${addEmployee.Input_MiddleName}      10
