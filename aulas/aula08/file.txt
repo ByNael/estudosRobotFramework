@@ -1,0 +1,4 @@
+modelo de estrutura de projetos nova e mais simples que a anterior
+tendo duas pastas principais são elas: suites e resources
+suites é onde fica as categorias de teste
+resources coisas importantes: credenciais
