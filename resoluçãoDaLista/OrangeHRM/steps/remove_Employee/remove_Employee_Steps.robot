@@ -28,5 +28,6 @@ E clique em Yes, Delete
 Então o empregado é excluido
     Wait Until Element Is Visible  ${PIM.A_EmployeeList}        10
     Click Element                  ${PIM.A_EmployeeList}
+    Sleep                          5s
     Element Should Not Be Visible  ${PIM.Div_Prova}        10           #verifica se o empregrado foi excluido de fato
 

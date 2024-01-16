@@ -37,8 +37,7 @@ E clique em save
 Então o empregado é adicionado
     Wait Until Element Is Visible  ${PIM.A_AddEmployee}         10
     Click Element                  ${PIM.A_AddEmployee}
-    Sleep                          2s
     Wait Until Element Is Visible  ${PIM.A_EmployeeList}        10
     Click Element                  ${PIM.A_EmployeeList}
-    Sleep                          2s
+    Wait Until Element Is Visible  ${PIM.Div_Prova}             10
     Element Should Be Visible      ${PIM.Div_Prova}        10           #verifica se o empregado foi adicionado de fato
