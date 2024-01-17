@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240116 22:04:35.022" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\resoluçãoDaLista\Netflix\suites\Login">
+<suite id="s1-s1" name="Login" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\resoluçãoDaLista\Netflix\suites\Login\login.robot">
+<test id="s1-s1-t1" name="TC01 - Verificando mensagem de erro email válido" line="5">
+<kw name="Dado que acesse o navegador" library="home_page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 22:04:35.287" level="INFO">Opening browser 'chrome' to base url 'https://www.netflix.com/br/'.</msg>
+<status status="PASS" starttime="20240116 22:04:35.287" endtime="20240116 22:04:38.352"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 22:04:38.352" endtime="20240116 22:04:39.647"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:35.286" endtime="20240116 22:04:39.647"/>
+</kw>
+<kw name="E clique no botão fechar cookie" library="home_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_Page.Button_Cookie}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 22:04:39.653" endtime="20240116 22:04:39.774"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_Page.Button_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 22:04:39.776" level="INFO">Clicking element '//button[@id="cookie-disclosure-close"]'.</msg>
+<status status="PASS" starttime="20240116 22:04:39.775" endtime="20240116 22:04:39.873"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:39.653" endtime="20240116 22:04:39.873"/>
+</kw>
+<kw name="Quando clique no botão entrar" library="home_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_Page.A_Entrar}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 22:04:39.885" endtime="20240116 22:04:39.915"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_Page.A_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 22:04:39.916" level="INFO">Clicking element '//a[text()="Entrar"]'.</msg>
+<status status="PASS" starttime="20240116 22:04:39.915" endtime="20240116 22:04:43.009"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:39.885" endtime="20240116 22:04:43.009"/>
+</kw>
+<kw name="E insira a senha" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_Page.Input_Senha}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 22:04:43.009" endtime="20240116 22:04:43.031"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login_Page.Input_Senha}</arg>
+<arg>${login.Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240116 22:04:43.033" level="INFO">Typing text '12345blablabla' into text field '//input[@id="id_password"]'.</msg>
+<status status="PASS" starttime="20240116 22:04:43.031" endtime="20240116 22:04:43.230"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:43.009" endtime="20240116 22:04:43.230"/>
+</kw>
+<kw name="E clique no botão entrar login" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_Page.Button_Entrar}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 22:04:43.230" endtime="20240116 22:04:43.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_Page.Button_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 22:04:43.253" level="INFO">Clicking element '//button[text()="Entrar"]'.</msg>
+<status status="PASS" starttime="20240116 22:04:43.250" endtime="20240116 22:04:43.321"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:43.230" endtime="20240116 22:04:43.321"/>
+</kw>
+<kw name="Então é exprimida a mensagem de erro" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_Page.Div_Error}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240116 22:04:43.321" endtime="20240116 22:04:43.343"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${login_Page.Div_Error}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240116 22:04:43.360" level="INFO">Element '//div[@id="error_message_userLoginId"]' is displayed.</msg>
+<status status="PASS" starttime="20240116 22:04:43.343" endtime="20240116 22:04:43.360"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:43.321" endtime="20240116 22:04:43.360"/>
+</kw>
+<kw name="Então feche o navegador" library="login_page">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240116 22:04:43.361" endtime="20240116 22:04:45.683"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:43.361" endtime="20240116 22:04:45.683"/>
+</kw>
+<status status="PASS" starttime="20240116 22:04:35.286" endtime="20240116 22:04:45.683"/>
+</test>
+<status status="PASS" starttime="20240116 22:04:35.046" endtime="20240116 22:04:45.684"/>
+</suite>
+<status status="PASS" starttime="20240116 22:04:35.024" endtime="20240116 22:04:45.686"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login">Login.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

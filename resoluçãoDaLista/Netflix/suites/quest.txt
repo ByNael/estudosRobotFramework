@@ -1,0 +1,3 @@
+Escreva um script de automação que acesse o site da Netflix, vá para a página de
+login, preencha o campo senha (informe qualquer valor) e clique no botão entrar. Após
+isso, verifique se a mensagem de erro aparece "infome um email ou número de telefone válido"
