@@ -1,0 +1,4 @@
+1 – Escreva um script de automação que acesse a página do google e faça uma
+busca por “Receita de lasanha” e clique na primeira receita exibida.
+2 – Escreva um script de automação que acesse a página do google e faça uma
+busca por “Receita de lasanha” e clique na segunda receita exibida.
