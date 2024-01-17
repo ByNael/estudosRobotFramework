@@ -1,0 +1,16 @@
+3 – Escreva um script de automação que acesse a página abaixo, pesquises por
+“Dress” na barra de busca, clique no primeiro produto que aparecer, mude a cor do
+produto, adicione no carrinho e marque a opção de continuar comprando.
+4 – Escreva um script de automação que acesse a página abaixo, selecione o menu
+“Women” e selecione a opção “T-shirts”.
+Dica: Como o menu precisa que o mouse fique sob ele para aparecerem outras
+opções tente utilizar a keyword “Press Keys” para simular a tecla “Tab” na opção
+“Women” dessa forma as outras opções do menu vão aparecer.
+5 – Escreva um script de automação que acesse a página abaixo, crie uma nova
+conta e logue com a conta recém-criada. Porém, criar nova conta e logar devem ser
+casos de teste separados, ex:
+TC01 – Criar nova conta
+TC02 – Realizar Login
+Dica: Utilize a keyword “Set Test Variable” da library BuiltIn para que as credenciais de
+email e senha que foram passados para o registro possam ser chamadas por outro
+caso de teste.

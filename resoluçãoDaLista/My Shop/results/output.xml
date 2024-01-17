@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240117 11:54:31.259" rpa="false" schemaversion="4">
+<suite id="s1" name="Pesquisa Loja" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\resoluçãoDaLista\My Shop\suites\Pesquisa_Loja">
+<suite id="s1-s1" name="pesquisa Loja" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\resoluçãoDaLista\My Shop\suites\Pesquisa_Loja\pesquisa_Loja.robot">
+<test id="s1-s1-t1" name="TC01 - Testando se o site pode ser acessado" line="7">
+<kw name="Quando abro o site My Shop" library="setup_teardown" type="SETUP">
+<kw name="Dado que acesse o site My Shop" library="home_page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 11:54:31.494" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<status status="PASS" starttime="20240117 11:54:31.492" endtime="20240117 11:54:38.989"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 11:54:38.989" endtime="20240117 11:54:39.145"/>
+</kw>
+<status status="PASS" starttime="20240117 11:54:31.492" endtime="20240117 11:54:39.145"/>
+</kw>
+<status status="PASS" starttime="20240117 11:54:31.491" endtime="20240117 11:54:39.145"/>
+</kw>
+<kw name="Dado que pesquiso uma roupa" library="home_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_page.Input_Search}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240117 11:54:39.145" endtime="20240117 11:54:39.245"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home_page.Input_Search}</arg>
+<arg>${pesquisa.Pesquisa}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240117 11:54:39.246" level="INFO">Typing text 'Dress' into text field '//input[@id="search_query_top"]'.</msg>
+<status status="PASS" starttime="20240117 11:54:39.245" endtime="20240117 11:54:39.364"/>
+</kw>
+<status status="PASS" starttime="20240117 11:54:39.145" endtime="20240117 11:54:39.364"/>
+</kw>
+<kw name="Quando clique no botão pesquisar" library="home_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_page.Button_Search}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240117 11:54:39.365" endtime="20240117 11:54:39.412"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_page.Button_Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240117 11:54:39.413" level="INFO">Clicking element '//button[@name="submit_search"]'.</msg>
+<status status="PASS" starttime="20240117 11:54:39.412" endtime="20240117 11:54:39.884"/>
+</kw>
+<status status="PASS" starttime="20240117 11:54:39.365" endtime="20240117 11:54:39.884"/>
+</kw>
+<kw name="Fechar navegador" library="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240117 11:54:39.886" endtime="20240117 11:54:42.257"/>
+</kw>
+<status status="PASS" starttime="20240117 11:54:39.884" endtime="20240117 11:54:42.257"/>
+</kw>
+<status status="PASS" starttime="20240117 11:54:31.491" endtime="20240117 11:54:42.258"/>
+</test>
+<status status="PASS" starttime="20240117 11:54:31.281" endtime="20240117 11:54:42.259"/>
+</suite>
+<status status="PASS" starttime="20240117 11:54:31.260" endtime="20240117 11:54:42.260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Pesquisa Loja">Pesquisa Loja</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="pesquisa Loja">Pesquisa Loja.pesquisa Loja</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
