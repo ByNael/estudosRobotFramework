@@ -7,6 +7,7 @@ Resource        ../main.robot
 ...     Button_Search=//button[@name="submit_search"]
 #...     A_Elemento=(//a[@href="http://www.automationpractice.pl/index.php?controller=order"])[1]
 ...     A_T_Shirts=//a[@title="T-shirts"]
+...     A_Login=//a[@title="Log in to your customer account"]
 
 ***Keywords***
 Dado que acesse o site My Shop
@@ -31,3 +32,7 @@ Dado que clique em T-Shirts
     Execute JavaScript             document.querySelector('.first-in-line-xs').style.display = 'block'; 
     Wait Until Element Is Visible       ${home_page.A_T_Shirts}          10s
     Click Element                       ${home_page.A_T_Shirts}
+
+Dado que clique em sign in
+    Wait Until Element Is Visible       ${home_page.A_Login}        10s
+    Click Element                       ${home_page.A_Login}
