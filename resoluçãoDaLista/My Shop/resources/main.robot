@@ -13,6 +13,6 @@ Resource        pages/product_page.robot
 Resource        pages/t_shirts_page.robot
 Resource        pages/login_page.robot
 Resource        pages/create_account_page.robot
-
+Resource        pages/my_account_page.robot
 ### shared ###
 Resource        shared/setup_teardown.robot

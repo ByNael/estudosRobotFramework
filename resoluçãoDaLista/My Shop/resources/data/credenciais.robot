@@ -3,7 +3,7 @@ Resource        ../main.robot
 
 ***Variables***
 &{credenciais}
-...     Email=joaozinho@123.com
+...     Email=mariazinha@123.com
 ...     Password=12345
-...     First_Name=João
-...     Last_Name=Zinho
+...     First_Name=Maria
+...     Last_Name=Zinha

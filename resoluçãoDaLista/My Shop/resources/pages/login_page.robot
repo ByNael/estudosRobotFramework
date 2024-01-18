@@ -24,7 +24,8 @@ Quando preencho os campos de login
     Wait Until Element Is Visible       ${login_page.Input_Password}        10s
     Input Text                          ${login_page.Input_Password}        ${credenciais.Password}
 
-E clico em sign in
+E clico no botão sign in
     Wait Until Element Is Visible       ${login_page.Button_Submit_Login}       10s
     Click Element                       ${login_page.Button_Submit_Login}
+
     

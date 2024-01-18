@@ -30,20 +30,23 @@ E preencho os campos de cadastro
 
 E adiciono a data de nascimento
     ### day of birth ###
-    Wait Until Element Is Visible       ${create_account.Select_Days}        10s
+    Wait Until Page Contains            ${create_account.Select_Days}        10s
     Click Element                       ${create_account.Select_Days}
     Wait Until Element Is Visible       ${create_account.Option_Day_Birth}        10s
     Click Element                       ${create_account.Option_Day_Birth}
+    Click Element                       ${create_account.Select_Days}
     ### month of birth ###
-    Wait Until Element Is Visible       ${create_account.Select_Months}        10s
+    Wait Until Page Contains            ${create_account.Select_Months}        10s
     Click Element                       ${create_account.Select_Months}
     Wait Until Element Is Visible       ${create_account.Option_Month_Birth}        10s
     Click Element                       ${create_account.Option_Month_Birth}
+    Click Element                       ${create_account.Select_Months}
     ### Year of birth ###
-    Wait Until Element Is Visible       ${create_account.Select_Years}        10s
+    Wait Until Page Contains            ${create_account.Select_Years}        10s
     Click Element                       ${create_account.Select_Years}
     Wait Until Element Is Visible       ${create_account.Option_Year_Birth}        10s
     Click Element                       ${create_account.Option_Year_Birth}
+    Click Element                       ${create_account.Select_Years}
 
 E clico em registrar
     Wait Until Element Is Visible       ${create_account.Button_Submit_Account}     10s
