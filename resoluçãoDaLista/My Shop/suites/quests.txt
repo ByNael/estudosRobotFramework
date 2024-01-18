@@ -14,3 +14,5 @@ TC02 – Realizar Login
 Dica: Utilize a keyword “Set Test Variable” da library BuiltIn para que as credenciais de
 email e senha que foram passados para o registro possam ser chamadas por outro
 caso de teste.
+
+http://www.automationpractice.pl/index.php
