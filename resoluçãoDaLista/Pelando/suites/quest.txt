@@ -1,0 +1,6 @@
+7 - Escreva um script de automação que acesse o site abaixo e selecione a primeira
+promoção listada.
+Site: https://www.pelando.com.br/?view_mode=grid
+8 – Escreva um script de automação que acesse o site abaixo e selecione a segunda
+promoção listada e clique no botão adicionar promoção.
+Site: https://www.pelando.com.br/?view_mode=grid
