@@ -1,0 +1,2 @@
+Escreva um script de automação que acesse a página do Youtube, busque por um
+vídeo e clique na primeira ocorrência que aparecer.
