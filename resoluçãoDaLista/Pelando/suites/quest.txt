@@ -2,5 +2,5 @@
 promoção listada.
 Site: https://www.pelando.com.br/?view_mode=grid
 8 – Escreva um script de automação que acesse o site abaixo e selecione a segunda
-promoção listada e clique no botão adicionar promoção.
+promoção listada e clique no botão ir para a loja
 Site: https://www.pelando.com.br/?view_mode=grid

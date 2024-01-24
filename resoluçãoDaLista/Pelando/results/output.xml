@@ -1,89 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240123 18:40:57.526" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240124 14:13:55.382" rpa="false" schemaversion="4">
 <suite id="s1" name="Promoção" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\resoluçãoDaLista\Pelando\suites\promoção">
 <suite id="s1-s1" name="Promoção" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\resoluçãoDaLista\Pelando\suites\promoção\promoção.robot">
-<test id="s1-s1-t1" name="TC01 - Acessar o site pelando e clicar na primeira promoção" line="7">
+<test id="s1-s1-t1" name="TC02 - Acessar o site pelando, clicar na segunda promoção e clicar na opção de ir para a loja" line="11">
 <kw name="Dado que acesse o site pelando" library="setups_teardowns" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240123 18:40:57.768" level="INFO">Opening browser 'chrome' to base url 'https://www.pelando.com.br/?view_mode=grid'.</msg>
-<status status="PASS" starttime="20240123 18:40:57.767" endtime="20240123 18:41:01.477"/>
+<msg timestamp="20240124 14:13:55.613" level="INFO">Opening browser 'chrome' to base url 'https://www.pelando.com.br/?view_mode=grid'.</msg>
+<status status="PASS" starttime="20240124 14:13:55.612" endtime="20240124 14:13:58.600"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240123 18:41:01.477" endtime="20240123 18:41:01.931"/>
+<status status="PASS" starttime="20240124 14:13:58.601" endtime="20240124 14:13:59.219"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${home_Page.A_Logo}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240123 18:41:01.932" endtime="20240123 18:41:02.024"/>
+<status status="PASS" starttime="20240124 14:13:59.219" endtime="20240124 14:13:59.297"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${home_Page.A_Logo}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20240123 18:41:02.075" level="INFO">Element '//a[@class="sc-fSurle hSxhMs sc-8e0067-0 sc-db3e6fe4-3 hZvKnp eiVZVL"]' is displayed.</msg>
-<status status="PASS" starttime="20240123 18:41:02.024" endtime="20240123 18:41:02.075"/>
+<msg timestamp="20240124 14:13:59.368" level="INFO">Element '//a[@class="sc-fSurle hSxhMs sc-8e0067-0 sc-db3e6fe4-3 hZvKnp eiVZVL"]' is displayed.</msg>
+<status status="PASS" starttime="20240124 14:13:59.297" endtime="20240124 14:13:59.368"/>
 </kw>
-<status status="PASS" starttime="20240123 18:40:57.766" endtime="20240123 18:41:02.075"/>
+<status status="PASS" starttime="20240124 14:13:55.612" endtime="20240124 14:13:59.368"/>
 </kw>
-<kw name="Dado que feche o alerta e aceite os cookies" library="home_Page">
+<kw name="Dado que clique na segunda promoção listada" library="home_page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${home_Page.I_Alerta}</arg>
+<arg>${home_Page.A_Segunda_Promoção}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20240123 18:41:20.637" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20240123 18:41:20.638" level="FAIL">Element '//i[@class="sc-guDLey iWDixA sc-fHejqy dhGCwy"]' not visible after 10 seconds.</msg>
-<status status="FAIL" starttime="20240123 18:41:02.079" endtime="20240123 18:41:20.640"/>
+<status status="PASS" starttime="20240124 14:13:59.375" endtime="20240124 14:14:00.638"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${home_Page.I_Alerta}</arg>
+<arg>${home_Page.A_Segunda_Promoção}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240123 18:41:20.640" endtime="20240123 18:41:20.641"/>
+<msg timestamp="20240124 14:14:00.639" level="INFO">Clicking element '(//a[@class="sc-labuuU cIsfvr"])[3]'.</msg>
+<status status="PASS" starttime="20240124 14:14:00.638" endtime="20240124 14:14:00.817"/>
 </kw>
+<status status="PASS" starttime="20240124 14:13:59.375" endtime="20240124 14:14:00.817"/>
+</kw>
+<kw name="Quando clique em ir pra loja" library="promo_page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${home_Page.Btn_Cookies}</arg>
+<arg>${promo_Page.Span_Ir_Pra_Loja}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240123 18:41:20.641" endtime="20240123 18:41:20.641"/>
+<status status="PASS" starttime="20240124 14:14:00.821" endtime="20240124 14:14:01.739"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${home_Page.Btn_Cookies}</arg>
+<arg>${promo_Page.Span_Ir_Pra_Loja}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240123 18:41:20.641" endtime="20240123 18:41:20.641"/>
+<msg timestamp="20240124 14:14:01.741" level="INFO">Clicking element '(//span[text()="Ir pra Loja"])[1]'.</msg>
+<status status="PASS" starttime="20240124 14:14:01.740" endtime="20240124 14:14:03.709"/>
 </kw>
-<status status="FAIL" starttime="20240123 18:41:02.079" endtime="20240123 18:41:20.641"/>
-</kw>
-<kw name="Quando clique na primeira promoção listada" library="home_Page">
-<status status="NOT RUN" starttime="20240123 18:41:20.678" endtime="20240123 18:41:20.678"/>
-</kw>
-<kw name="Então a pagina da promoção é aberta" library="promo_Page">
-<status status="NOT RUN" starttime="20240123 18:41:20.678" endtime="20240123 18:41:20.678"/>
+<status status="PASS" starttime="20240124 14:14:00.821" endtime="20240124 14:14:03.709"/>
 </kw>
 <kw name="Fechar navegador" library="setups_teardowns" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240123 18:41:20.679" endtime="20240123 18:41:24.404"/>
+<status status="PASS" starttime="20240124 14:14:03.713" endtime="20240124 14:14:06.139"/>
 </kw>
-<status status="PASS" starttime="20240123 18:41:20.679" endtime="20240123 18:41:24.404"/>
+<status status="PASS" starttime="20240124 14:14:03.713" endtime="20240124 14:14:06.139"/>
 </kw>
-<status status="FAIL" starttime="20240123 18:40:57.766" endtime="20240123 18:41:24.405">Element '//i[@class="sc-guDLey iWDixA sc-fHejqy dhGCwy"]' not visible after 10 seconds.</status>
+<status status="PASS" starttime="20240124 14:13:55.611" endtime="20240124 14:14:06.140"/>
 </test>
-<status status="FAIL" starttime="20240123 18:40:57.548" endtime="20240123 18:41:24.407"/>
+<status status="PASS" starttime="20240124 14:13:55.404" endtime="20240124 14:14:06.141"/>
 </suite>
-<status status="FAIL" starttime="20240123 18:40:57.528" endtime="20240123 18:41:24.408"/>
+<status status="PASS" starttime="20240124 14:13:55.384" endtime="20240124 14:14:06.143"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Promoção">Promoção</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Promoção">Promoção.Promoção</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Promoção">Promoção</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Promoção">Promoção.Promoção</stat>
 </suite>
 </statistics>
 <errors>
