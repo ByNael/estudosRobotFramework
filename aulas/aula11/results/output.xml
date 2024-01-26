@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240125 22:34:38.633" rpa="false" schemaversion="4">
+<suite id="s1" name="Form" source="C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aulas\aula11\form.robot">
+<test id="s1-t1" name="TC01 - Acessar e preencher formulario" line="35">
+<kw name="Dado que acesse o formulario">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240125 22:34:38.836" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20240125 22:34:38.835" endtime="20240125 22:34:52.124"/>
+</kw>
+<status status="PASS" starttime="20240125 22:34:38.835" endtime="20240125 22:34:52.124"/>
+</kw>
+<kw name="Então o formulario deve ser preenchido">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${input_firstName}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240125 22:34:52.124" endtime="20240125 22:34:52.149"/>
+</kw>
+<kw name="FakerLibrary.FirstName">
+<var>${nome}</var>
+<msg timestamp="20240125 22:34:52.151" level="FAIL">No keyword with name 'FakerLibrary.FirstName' found.</msg>
+<status status="FAIL" starttime="20240125 22:34:52.151" endtime="20240125 22:34:52.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_firstName}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 22:34:52.151" endtime="20240125 22:34:52.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_lastName}</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 22:34:52.151" endtime="20240125 22:34:52.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_userEmail}</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 22:34:52.151" endtime="20240125 22:34:52.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_userNumber}</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 22:34:52.151" endtime="20240125 22:34:52.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textarea_currentAddress}</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 22:34:52.151" endtime="20240125 22:34:52.151"/>
+</kw>
+<status status="FAIL" starttime="20240125 22:34:52.124" endtime="20240125 22:34:52.151"/>
+</kw>
+<status status="FAIL" starttime="20240125 22:34:38.835" endtime="20240125 22:34:52.152">No keyword with name 'FakerLibrary.FirstName' found.</status>
+</test>
+<status status="FAIL" starttime="20240125 22:34:38.635" endtime="20240125 22:34:52.153"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240125 22:34:38.831" level="ERROR">Error in file 'C:\Users\natan\OneDrive\Imagens\Documentos\cursoRobotYt\aulas\aula11\form.robot' on line 3: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'pkg_resources'
+Traceback (most recent call last):
+  File "C:\Users\natan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\FakerLibrary\__init__.py", line 1, in &lt;module&gt;
+    import pkg_resources
+PYTHONPATH:
+  C:\Users\natan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.496.0_x64__qbz5n2kfra8p0\python312.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.496.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.496.0_x64__qbz5n2kfra8p0\Lib
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.496.0_x64__qbz5n2kfra8p0
+  C:\Users\natan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.496.0_x64__qbz5n2kfra8p0\Lib\site-packages</msg>
+</errors>
+</robot>
