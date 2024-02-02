@@ -13,7 +13,7 @@ Adicionar novo produto
     [Arguments]    ${title}    ${description}    ${price}    ${brand}
 
     &{headers}  Create Dictionary        Content_type=application/json
-    ${body}     Create Dictionary        title=${title}  description=${description}  price=${price}  brand=${brand}
+    &{body}     Create Dictionary        title=${title}  description=${description}  price=${price}  brand=${brand}
 
     POST        url=${HOST}/${ADD_NEW_PRODUCT}        headers=&{headers}        json=&{body}
 
