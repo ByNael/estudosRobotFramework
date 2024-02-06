@@ -22,9 +22,9 @@ Pegar um unico produto de id ${id}
 
     ${GET_SINGLE_PRODUCT}=        Replace String        ${GET_SINGLE_PRODUCT}        id-produto        ${id}        ###replace string recebe: oque eu quero alterar, o que buscar para alterar e o o que alterar no elemento buscado
 
-    ${responde}=    GET        url=${HOST}/${GET_SINGLE_PRODUCT}  headers=&{headers}
+    ${response}=    GET        url=${HOST}/${GET_SINGLE_PRODUCT}  headers=&{headers}
 
-    [Return]    ${responde}
+    [Return]    ${response}
 
 *** Test Cases ***
 TC01 - Realizar busca de todos os produtos
@@ -32,11 +32,11 @@ TC01 - Realizar busca de todos os produtos
 
 
 TC02 - Realizar busca de um unico produto
-    ${respondse_keyword}=  Pegar um unico produto de id 50
+    ${response_keyword}=  Pegar um unico produto de id 1
 
-    Should Be Equal As Strings    ${respondse_keyword}    200
-    Should Be Equal As Strings    ${respondse_keyword.json()["title"]}    iPhone 9
-    Should Be Equal As Strings    ${respondse_keyword.json()["price"]}    549
+    Should Be Equal As Strings    ${response_keyword.status_code}    200
+    Should Be Equal As Strings    ${response_keyword.json()["title"]}    iPhone 9
+    Should Be Equal As Strings    ${response_keyword.json()["price"]}    549
 
-    Log     ${respondse_keyword.json()}
-    Log    ${respondse_keyword.json()["title"]}
+    Log     ${response_keyword.json()}
+    Log        ${response_keyword.json()["title"]}
