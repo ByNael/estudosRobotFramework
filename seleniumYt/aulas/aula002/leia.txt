@@ -1,0 +1,1 @@
+Aula destinada a um cursão introdutório de python
