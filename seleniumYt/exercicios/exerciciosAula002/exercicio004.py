@@ -12,5 +12,3 @@ y = (numero_01*3)+numero_03
 z = numero_03**3
 
 print(f'Expressão 1: {x},Expressão 2: {y},Expressão 3: {z} ')
-
-
