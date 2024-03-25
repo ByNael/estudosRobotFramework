@@ -13,4 +13,3 @@ if carteira>=tenis:
     print('compra o tênis')
 else: 
     print("deixa pra dps")
-
